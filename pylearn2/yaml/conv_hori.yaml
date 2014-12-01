@@ -3,7 +3,6 @@
     dataset: &train !obj:pylearn2.datasets.zca_dataset.ZCA_Dataset {
         preprocessed_dataset: !pkl: "${PYLEARN2_DATA_PATH}/moe_face/pylearn2_gcn_whitened/train.pkl",
         preprocessor: !pkl: "${PYLEARN2_DATA_PATH}/moe_face/pylearn2_gcn_whitened/preprocessor.pkl",
-        convert_to_one_hot: 0,
         start: 0,
         stop: 12490,
         axes: ['b', 'c', 0, 1]
@@ -60,7 +59,6 @@
             'valid' : !obj:pylearn2.datasets.zca_dataset.ZCA_Dataset {
                 preprocessed_dataset: !pkl: "${PYLEARN2_DATA_PATH}/moe_face/pylearn2_gcn_whitened/train.pkl",
                 preprocessor: !pkl: "${PYLEARN2_DATA_PATH}/moe_face/pylearn2_gcn_whitened/preprocessor.pkl",
-                convert_to_one_hot: 0,
                 start: 12490,
                 stop: 13490,
                 axes: ['b', 'c', 0, 1]

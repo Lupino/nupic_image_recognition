@@ -2,7 +2,6 @@
     dataset: &train !obj:pylearn2.datasets.zca_dataset.ZCA_Dataset {
         preprocessed_dataset: !pkl: "%(data_path)s/pylearn2_gcn_whitened/train.pkl",
         preprocessor: !pkl: "%(data_path)s/pylearn2_gcn_whitened/preprocessor.pkl",
-        convert_to_one_hot: 0,
         axes: ['b', 'c', 0, 1]
     },
     # dataset: &train !obj:pylearn2.datasets.mnist.MNIST {
