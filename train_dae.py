@@ -64,6 +64,7 @@ def test_sda():
     skip.skip_if_no_data()
 
     yaml_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                                  'pylearn2',
                                                   'yaml/stacked_autoencoders/'))
     data_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data'))
     save_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'result'))
