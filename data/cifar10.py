@@ -272,9 +272,9 @@ class CIFAR10(dense_design_matrix.DenseDesignMatrix):
             class? Whoever wrote it shows up as "unknown" in git blame.
         """
         from pylearn2.utils import string_utils
-        # fname = os.path.join(string_utils.preprocess('${PYLEARN2_DATA_PATH}'),
-        #                      'cifar10', 'cifar-10-batches-py', file)
-        fname = os.path.join('/Users/karino-t/data/cifar10/cifar-10-batches-py',file)
+        fname = os.path.join(string_utils.preprocess('${PYLEARN2_DATA_PATH}'),
+                              'cifar10', 'cifar-10-batches-py', file)
+        # fname = os.path.join('/Users/karino-t/data/cifar10/cifar-10-batches-py',file)
         if not os.path.exists(fname):
             raise IOError(fname+" was not found. You probably need to "
                           "download the CIFAR-10 dataset by using the "
