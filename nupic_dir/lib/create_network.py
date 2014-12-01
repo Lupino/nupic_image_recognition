@@ -15,17 +15,10 @@ https://github.com/numenta/nupic/issues/727
 sensor_params = {
     'sensor1': {
         "pixel": {
-            "clipInput": True,
-            "type": "VectorEncoderOPF",
-            "dataType": "float",
+            "type": "SparsePassThroughEncoder",
             "n": 1000,
-            "w": 21,
-            "length": 27,
-            #"length": 192,
             "fieldname": u"pixel",
-            "name": u"pixel",
-            "maxval":  1.5,
-            "minval": -1.5,
+            "verbosity": 1,
         },
     },
 }
