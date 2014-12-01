@@ -10,7 +10,7 @@ import copy
 from collections import defaultdict
 from collections import OrderedDict
 
-from nupic.algorithms.anomaly import computeAnomalyScore
+from nupic.algorithms.anomaly import computeRawAnomalyScore
 from nupic.encoders import MultiEncoder
 from nupic.engine import Network
 
@@ -358,7 +358,7 @@ class ClaClassifier():
             sp_bottomUpOut = self.network.regions["tp_"+name].getInputData("bottomUpIn").nonzero()[0]
 
             if self.prevPredictedColumns.has_key(name):
-                score = computeAnomalyScore(sp_bottomUpOut, self.prevPredictedColumns[name])
+                score = computeRawAnomalyScore(sp_bottomUpOut, self.prevPredictedColumns[name])
             #topdown_predict = self.network.regions["TP"].getSelf()._tfdr.topDownCompute().copy().nonzero()[0]
             topdown_predict = self.network.regions["tp_"+name].getSelf()._tfdr.topDownCompute().nonzero()[0]
             self.prevPredictedColumns[name] = copy.deepcopy(topdown_predict)
